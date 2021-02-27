@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Frome</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class=" py-3 text-white" style="background-color: #00acc1">
+    <h1>&nbsp;&nbsp;<i class="fas fa-chart-bar "></i> Order Frome
+    </h1>
+</div>
+
+
+
+
+<div class="bg-light p-3 ">
+
+    <div class="row">
+        <div class="col-md-4 mb-2">
+            <a href="index.html" class="btn btn-primary d-block font-weight-bold">
+                <i class="fas fa-plus"></i> Customer From</a>
+        </div>
+        <div class="col-md-4 mb-2">
+            <a href="index.html" class="btn btn-success d-block font-weight-bold">
+                <i class="fas fa-plus"></i> Order Details</a>
+        </div>
+        <div class="col-md-4 mb-2">
+            <a href="Item.html" class="btn btn-warning d-block font-weight-bold">
+                <i class="fas fa-plus"></i> &nbsp;Add Item</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <section class="container">
+
+                <div class="row col-sm">
+                    <div class="col-md  ">
+
+                        <form>
+                            <div class="row mt-4 mb-4">
+                                <div class="col ">
+                                    <input type="text" class="form-control" placeholder="Date" aria-label="Date">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Time" aria-label="Time">
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <input type="text"  class="form-control" id="Orderid" placeholder="Order ID">
+
+                            </div>
+
+                            <div class="mb-3 mt-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Customer ID</option>
+                                    <option value="1">C001</option>
+                                    <option value="2">C002</option>
+                                    <option value="3">C003</option>
+                                </select>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3 ">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Item Code</option>
+                                            <option value="1">I001</option>
+                                            <option value="2">I002</option>
+                                            <option value="3">I003</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="mb-3 ">
+                                        <input type="text"  class="form-control" id="Itemname" placeholder="Item Name">
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <input type="text"  class="form-control" id="Qty" placeholder="QTY">
+                            </div>
+
+                            <div class=" mb-3">
+                                <input type="text"  class="form-control " id="Price" placeholder="Price">
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="d-grid  d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary me-md-2 mb-3" type="button">Add Item</button>
+
+                    </div>
+
+
+
+
+                    <div class="row mb-5">
+                        <div class="col">
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#demoModal">Place</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-sm">
+
+
+            <nav class="navbar navbar-light bg-light mt-4">
+                <div class="container-fluid ">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Order ID" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+            <div class="col-sm bg-light">
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Order ID</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">2021-02-23</th>
+                        <td>9.55 pm</td>
+                        <td>D001</td>
+                        <td>5470.00</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2021-02-23</th>
+                        <td>9.55 pm</td>
+                        <td>D001</td>
+                        <td>5470.00</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">2021-02-23</th>
+                        <td>9.55 pm</td>
+                        <td>D001</td>
+                        <td>5470.00</td>
+
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2021-02-23</th>
+                        <td>9.55 pm</td>
+                        <td>D001</td>
+                        <td>5470.00</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="demoModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Please confirm!</h2>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>This is Order plase ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Confirm</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
